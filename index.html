@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Crush!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            color: #333;
+            margin-top: 10%;
+            position: relative;
+            overflow: hidden;
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #FF69B4;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #FF1493;
+        }
+        .yes-button {
+            font-size: 22px;
+            padding: 12px 24px;
+        }
+        .no-button {
+            background-color: #f44336;
+        }
+        .no-button:hover {
+            background-color: #e53935;
+        }
+        .image-container, .video-container {
+            display: none;
+            position: absolute;
+            width: 200px; /* Default size */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 10;
+        }
+        .image-container img, .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .image-container .text, .video-container .text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF69B4;
+            margin-top: 10px;
+            position: absolute;
+            width: 100%;
+            top: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .image-container button, .video-container button {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .large-button {
+            font-size: 24px; /* Slightly smaller size for buttons */
+            padding: 15px 30px; /* Adjusted padding */
+        }
+        .centered-image {
+            width: 70vw; /* Adjusted size to be larger but not full screen */
+            height: auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            text-align: center;
+        }
+        .centered-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .yes-buttons-container {
+            position: absolute;
+            top: 60%; /* Position from the top */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            z-index: 20;
+        }
+        .yes-buttons-container button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message">
+        HI CRUSH, NAPAKA GANDA MO ALAM MO BA YUNNNNNN? ITO NABA YUNG TINATAWAG NILANG LOVE AT FIRST SIGHT? CRUSH MO RIN BA AKO? HAHAHAHAHAHA
+    </div>
+
+    <div class="buttons">
+        <button id="yes-button" class="yes-button" onclick="nextStep('yes')">Yes</button>
+        <button id="no-button" class="no-button" onclick="nextStep('no')">No</button>
+    </div>
+
+    <div id="image1" class="image-container">
+        <img src="cutmeme.jpg" alt="First Image">
+        <div class="text">Weeeeeh?</div>
+        <button class="yes-button" onclick="nextStep('yes')">Yes</button>
+        <button class="no-button" onclick="nextImage(1)">No</button>
+    </div>
+
+    <div id="video1" class="video-container">
+        <img src="dogsad.jpg" alt="First Image">
+        <div class="text">sad na ako nitooo</div>
+        <button class="yes-button" onclick="nextStep('yes')">Yes</button>
+        <button class="no-button" onclick="nextImage(2)">No</button>
+    </div>
+
+    <div id="image3" class="image-container">
+        <img src="why.jpg" alt="Third Image">
+        <div class="text">but whyyyyyyyyyyyyyy</div>
+        <button class="yes-button" onclick="nextStep('yes')">Yes</button>
+        <button class="no-button" onclick="nextImage(3)">No</button>
+    </div>
+
+    <div id="image4" class="image-container">
+        <img src="meme3.jpeg" alt="Fourth Image">
+        <div class="text">Di mo ako matitiis</div>
+        <button class="yes-button" onclick="nextStep('yes')">Yes</button>
+        <button class="no-button" onclick="nextImage(4)">No</button>
+    </div>
+
+    <div id="image5" class="image-container centered-image">
+        <img src="sdfgsdgt.jpg" alt="Fifth Image">
+        <div class="text">WALA KANANG MAGAGAWA CRUSHHH!!!</div>
+        <div class="yes-buttons-container">
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+            <button class="large-button yes-button" onclick="nextStep('yes')">Yes</button>
+        </div>
+    </div>
+
+    <!-- Auto-playing music -->
+    <audio src="C:\Users\User\Downloads\yourmusic.mp3" autoplay></audio>
+
+    <script>
+        let noClicks = 0;
+
+        function nextStep(answer) {
+            if (answer === 'no') {
+                noClicks++;
+                document.getElementById('no-button').style.display = 'none';
+                displayElement('image1');
+            } else {
+                window.location.href = 'romantic.html';
+            }
+        }
+
+        function nextImage(imageNumber) {
+            let prevElement = document.getElementById(imageNumber === 2 ? 'video1' : 'image' + imageNumber);
+            prevElement.querySelectorAll('button').forEach(btn => btn.style.display = 'none');
+
+            if (imageNumber === 4) {
+                // Display last image in centered and larger format
+                displayElement('image5');
+            } else if (imageNumber < 5) {
+                let nextElement = document.getElementById(imageNumber === 1 ? 'video1' : 'image' + (imageNumber + 1));
+                displayElement(imageNumber === 1 ? 'video1' : 'image' + (imageNumber + 1));
+            }
+        }
+
+        function displayElement(elementId) {
+            let element = document.getElementById(elementId);
+            element.style.display = 'block';
+            
+            // Center the element if it is the full-size image
+            if (elementId === 'image5') {
+                element.style.left = '50%';
+                element.style.top = '50%';
+                element.style.transform = 'translate(-50%, -50%)';
+            } else {
+                // Check if position is already stored
+                const storedPosition = localStorage.getItem(elementId);
+                if (storedPosition) {
+                    const position = JSON.parse(storedPosition);
+                    element.style.left = position.left + 'px';
+                    element.style.top = position.top + 'px';
+                } else {
+                    // Generate and store a new position
+                    const xPos = Math.random() * (window.innerWidth - element.clientWidth);
+                    const yPos = Math.random() * (window.innerHeight - element.clientHeight);
+                    const position = {
+                        left: Math.max(0, Math.min(xPos, window.innerWidth - element.clientWidth)),
+                        top: Math.max(0, Math.min(yPos, window.innerHeight - element.clientHeight))
+                    };
+                    localStorage.setItem(elementId, JSON.stringify(position));
+                    element.style.left = position.left + 'px';
+                    element.style.top = position.top + 'px';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
